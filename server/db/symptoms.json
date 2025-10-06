@@ -1,0 +1,75 @@
+[
+  {
+    "id": 1,
+    "name": "coughing",
+    "description": "A persistent or frequent cough that may be dry or produce mucus. Can range from mild irritation to severe disruption of daily activities and sleep.",
+    "interventions": [
+      1,
+      2
+    ]
+  },
+  {
+    "id": 3,
+    "name": "fever",
+    "description": "Elevated body temperature above normal (98.6°F/37°C), often accompanied by chills, sweating, and general discomfort. Usually indicates the body is fighting an infection.",
+    "interventions": [
+      2,
+      3,
+      5,
+      10,
+      13
+    ]
+  },
+  {
+    "id": 5,
+    "name": "sore throat",
+    "description": "Pain, scratchiness, or irritation in the throat that often worsens when swallowing. May be caused by viral infections, bacterial infections, or environmental factors.",
+    "interventions": [
+      1,
+      2,
+      5
+    ]
+  },
+  {
+    "id": 6,
+    "name": "sores",
+    "description": "Open wounds, ulcers, or lesions on the skin or mucous membranes. May be painful, slow to heal, or recurrent, potentially indicating infection or other underlying conditions.",
+    "interventions": [
+      6,
+      7,
+      10,
+      15
+    ]
+  },
+  {
+    "id": 7,
+    "name": "rash",
+    "description": "Changes in skin appearance including redness, bumps, patches, or irritation. May be itchy, painful, or cosmetically concerning, with various underlying causes including allergies or infections.",
+    "interventions": [
+      7,
+      8,
+      10
+    ]
+  },
+  {
+    "id": 8,
+    "name": "constipation",
+    "description": "Difficulty or infrequency in bowel movements, typically fewer than three times per week. May cause abdominal discomfort, bloating, and strain during defecation.",
+    "interventions": [
+      9,
+      10
+    ]
+  },
+  {
+    "id": 9,
+    "name": "weakness",
+    "description": "General fatigue, lack of energy, or reduced physical strength that interferes with daily activities. May indicate underlying medical conditions requiring professional evaluation.",
+    "interventions": [
+      10,
+      11,
+      12,
+      13,
+      14
+    ]
+  }
+]

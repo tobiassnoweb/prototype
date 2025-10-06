@@ -1,0 +1,10 @@
+{
+  "server": {
+    "port": 3030,
+    "host": "localhost"
+  },
+  "database": {
+    "interventions_path": "db/interventions.json",
+    "symptoms_path": "db/symptoms.json"
+  }
+}

@@ -1,0 +1,193 @@
+[
+  {
+    "id": 1,
+    "name": "cough drops",
+    "description": "Medicated lozenges that dissolve slowly in the mouth to soothe throat irritation and suppress coughing. Contains ingredients like menthol or eucalyptus for temporary relief.",
+    "severity": [
+      "mild"
+    ],
+    "product_link": "https://mantacares.com",
+    "product_image": "https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png",
+    "likes": 100,
+    "dislikes": 2
+  },
+  {
+    "id": 2,
+    "name": "honey tea",
+    "description": "Warm tea with honey that provides soothing relief for throat irritation and cough. The honey coats the throat while the warmth helps reduce inflammation and provides comfort.",
+    "severity": [
+      "mild",
+      "moderate"
+    ],
+    "product_link": "https://mantacares.com",
+    "product_image": "https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png",
+    "likes": 85,
+    "dislikes": 5
+  },
+  {
+    "id": 3,
+    "name": "ibuprofen",
+    "description": "Non-steroidal anti-inflammatory drug (NSAID) that reduces pain, inflammation, and fever. Effective for headaches, muscle pain, and general discomfort. Take with food to reduce stomach irritation.",
+    "severity": [
+      "moderate",
+      "severe"
+    ],
+    "product_link": "https://mantacares.com",
+    "product_image": "https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png",
+    "likes": 150,
+    "dislikes": 8
+  },
+  {
+    "id": 4,
+    "name": "heating pad",
+    "description": "Electric or microwaveable pad that provides targeted heat therapy to relieve muscle tension and pain. Apply for 15-20 minutes at a time to affected areas for comfort and relaxation.",
+    "severity": [
+      "mild",
+      "moderate"
+    ],
+    "product_link": "https://mantacares.com",
+    "product_image": "https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png",
+    "likes": 75,
+    "dislikes": 3
+  },
+  {
+    "id": 5,
+    "name": "prescription antibiotics",
+    "description": "Medication prescribed by a healthcare provider to treat bacterial infections. Must be taken exactly as directed and completed fully, even if symptoms improve before finishing the course.",
+    "severity": [
+      "severe"
+    ],
+    "product_link": "https://mantacares.com",
+    "product_image": "https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png",
+    "likes": 200,
+    "dislikes": 15
+  },
+  {
+    "id": 6,
+    "name": "antiseptic ointment",
+    "description": "Topical medication that prevents infection in minor cuts, scrapes, and sores. Contains antibacterial ingredients to keep wounds clean and promote healing while preventing bacterial growth.",
+    "severity": [
+      "mild",
+      "moderate"
+    ],
+    "product_link": "https://mantacares.com",
+    "product_image": "https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png",
+    "likes": 92,
+    "dislikes": 4
+  },
+  {
+    "id": 7,
+    "name": "hydrocortisone cream",
+    "description": "Topical corticosteroid that reduces inflammation, itching, and redness of the skin. Effective for treating rashes, eczema, and other skin irritations. Use sparingly and as directed.",
+    "severity": [
+      "mild",
+      "moderate"
+    ],
+    "product_link": "https://mantacares.com",
+    "product_image": "https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png",
+    "likes": 88,
+    "dislikes": 6
+  },
+  {
+    "id": 8,
+    "name": "antihistamine",
+    "description": "Medication that blocks histamine receptors to reduce allergic reactions, itching, and inflammation. Helpful for treating rashes caused by allergies or environmental irritants.",
+    "severity": [
+      "moderate"
+    ],
+    "product_link": "https://mantacares.com",
+    "product_image": "https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png",
+    "likes": 110,
+    "dislikes": 7
+  },
+  {
+    "id": 9,
+    "name": "fiber supplement",
+    "description": "Dietary supplement that adds bulk to stool and promotes regular bowel movements. Helps relieve constipation by improving digestive health. Take with plenty of water for best results.",
+    "severity": [
+      "mild",
+      "moderate"
+    ],
+    "product_link": "https://mantacares.com",
+    "product_image": "https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png",
+    "likes": 65,
+    "dislikes": 12
+  },
+  {
+    "id": 10,
+    "name": "contact your doctor",
+    "description": "Seek immediate professional medical evaluation when symptoms are severe, persistent, or concerning. Healthcare providers can diagnose underlying conditions and prescribe appropriate treatment plans.",
+    "severity": [
+      "severe"
+    ],
+    "product_link": "https://mantacares.com",
+    "product_image": "https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png",
+    "likes": 500,
+    "dislikes": 1,
+    "SOS": true
+  },
+  {
+    "id": 11,
+    "name": "multivitamin supplement",
+    "description": "Daily vitamin and mineral supplement to address potential nutritional deficiencies that may contribute to weakness. Contains essential vitamins and minerals to support energy metabolism and overall health.",
+    "severity": [
+      "mild",
+      "moderate"
+    ],
+    "product_link": "https://mantacares.com",
+    "product_image": "https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png",
+    "likes": 78,
+    "dislikes": 9
+  },
+  {
+    "id": 12,
+    "name": "iron supplement",
+    "description": "Supplement to address iron deficiency anemia, a common cause of weakness and fatigue. Take with vitamin C to enhance absorption and avoid with dairy products or calcium supplements.",
+    "severity": [
+      "mild",
+      "moderate"
+    ],
+    "product_link": "https://mantacares.com",
+    "product_image": "https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png",
+    "likes": 95,
+    "dislikes": 14
+  },
+  {
+    "id": 13,
+    "name": "rest and hydration",
+    "description": "Adequate sleep (7-9 hours) and proper hydration to support body recovery and energy levels. Dehydration and sleep deprivation are common reversible causes of weakness and fatigue.",
+    "severity": [
+      "mild"
+    ],
+    "product_link": "https://mantacares.com",
+    "product_image": "https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png",
+    "likes": 120,
+    "dislikes": 3
+  },
+  {
+    "id": 14,
+    "name": "light exercise",
+    "description": "Gentle physical activity like walking or stretching to improve circulation and energy levels. Start slowly and gradually increase activity as tolerated to build strength and endurance.",
+    "severity": [
+      "mild",
+      "moderate"
+    ],
+    "product_link": "https://mantacares.com",
+    "product_image": "https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png",
+    "likes": 89,
+    "dislikes": 8
+  },
+  {
+    "id": 15,
+    "name": "urgent medical consultation",
+    "description": "Seek prompt medical attention for concerning symptoms that may require immediate evaluation. Contact your healthcare provider or visit urgent care for symptoms that are worsening or persistent.",
+    "severity": [
+      "moderate"
+    ],
+    "product_link": "https://mantacares.com",
+    "product_image": "https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png",
+    "likes": 425,
+    "dislikes": 2,
+    "SOS": true
+  }
+]
