@@ -109,6 +109,7 @@ export const SymptomsDetail: React.FC = () => {
       intervention.severity.includes(severity)
     );
   }, [currentInterventions, severity]);
+
   const handleBack = () => {
     setForm({});
     setIsEditing(false);
@@ -322,47 +323,43 @@ export const SymptomsDetail: React.FC = () => {
                     Available Treatments
                   </Typography>
                   <List disablePadding>
-                    {filteredInterventions
-                      .filter((_intervent: Intervention) =>
-                        _intervent.severity.includes(severity)
-                      )
-                      .map((intervention: Intervention) => (
-                        <React.Fragment key={intervention.id}>
-                          <ListItem disablePadding sx={{ py: 1 }}>
-                            <ListItemAvatar>
-                              <Avatar src={intervention.product_image} />
-                            </ListItemAvatar>
-                            <ListItemText
-                              primary={
-                                <>
-                                  <Typography
-                                    variant="subtitle1"
-                                    fontWeight="medium"
-                                  >
-                                    {intervention.name}
-
-                                    {intervention.SOS && (
-                                      <Chip
-                                        color="warning"
-                                        label="SOS"
-                                        style={{ marginLeft: "1rem" }}
-                                      ></Chip>
-                                    )}
-                                  </Typography>
-                                </>
-                              }
-                              secondary={
+                    {filteredInterventions.map((intervention: Intervention) => (
+                      <React.Fragment key={intervention.id}>
+                        <ListItem disablePadding sx={{ py: 1 }}>
+                          <ListItemAvatar>
+                            <Avatar src={intervention.product_image} />
+                          </ListItemAvatar>
+                          <ListItemText
+                            primary={
+                              <>
                                 <Typography
-                                  variant="body2"
-                                  color="text.secondary"
+                                  variant="subtitle1"
+                                  fontWeight="medium"
                                 >
-                                  {intervention.description}
+                                  {intervention.name}
+
+                                  {intervention.SOS && (
+                                    <Chip
+                                      color="warning"
+                                      label="SOS"
+                                      style={{ marginLeft: "1rem" }}
+                                    ></Chip>
+                                  )}
                                 </Typography>
-                              }
-                            />
-                          </ListItem>
-                        </React.Fragment>
-                      ))}
+                              </>
+                            }
+                            secondary={
+                              <Typography
+                                variant="body2"
+                                color="text.secondary"
+                              >
+                                {intervention.description}
+                              </Typography>
+                            }
+                          />
+                        </ListItem>
+                      </React.Fragment>
+                    ))}
                   </List>
                 </Box>
               </>
