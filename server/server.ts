@@ -9,29 +9,13 @@ import express, {
   requestType,
   app,
 } from "polyexpress";
+import aichatService from "./aichat";
 
 // Load configuration
 const configPath = path.join(__dirname, "config.json");
 const config = JSON.parse(fs.readFileSync(configPath, "utf8"));
 
-interface Intervention {
-  id: number;
-  name: string;
-  description: string;
-  severity: string[];
-  product_link: string;
-  product_image: string;
-  likes: number;
-  dislikes: number;
-  SOS?: boolean;
-}
-
-interface Symptom {
-  id: number;
-  name: string;
-  description: string;
-  interventions: number[];
-}
+import { Intervention, Symptom } from "./server-types";
 
 const DB_PATH = {
   interventions: path.join(__dirname, config.database.interventions_path),
@@ -368,10 +352,56 @@ polyservice.use(express.urlencoded({ extended: true }));
 // Register services
 polyservice.register(interventionsService);
 polyservice.register(symptomsService);
+polyservice.register(aichatService);
 
 // Start the server
 const PORT = process.env.PORT || config.server.port;
 console.log(`Server starting on ${config.server.host}:${PORT}`);
 
 polyservice.init({ httplistener: HttpListener });
+// Expose a short /aichat route for the client (client expects POST /aichat)
+try {
+  // require polyexpress again to get the actual app instance after initialization
+  const polyexpressRuntime = require("polyexpress");
+  const expressApp =
+    (polyexpressRuntime && polyexpressRuntime.app) ||
+    (polyexpressRuntime &&
+      polyexpressRuntime.default &&
+      polyexpressRuntime.default.app) ||
+    (app as any);
+  console.log("Attaching explicit /aichat route to runtime express app", {
+    hasApp: !!expressApp,
+  });
+  expressApp.post("/aichat", async (req: any, res: any) => {
+    try {
+      console.log("/aichat POST received", {
+        body: req.body && Object.keys(req.body).length ? req.body : null,
+      });
+      const body = req.body || {};
+      const svc: any = require("./aichat").default || null;
+      if (!svc || !svc.method || !svc.method[0] || !svc.method[0].callback) {
+        return res
+          .status(500)
+          .json({ code: 500, message: "AI service unavailable" });
+      }
+      const cb = svc.method[0].callback;
+      const result = await cb(body.message, body.conversationHistory);
+      console.log("/aichat result code", result && result.code);
+      return res.status(result.code || 200).json(result);
+    } catch (err: any) {
+      console.error("/aichat handler error", err);
+      return res.status(500).json({
+        code: 500,
+        message: String(err && err.message ? err.message : err),
+      });
+    }
+  });
+  // simple health check for diagnostics
+  expressApp.get("/aichat/health", (req: any, res: any) => {
+    res.json({ ok: true });
+  });
+} catch (e) {
+  console.error("Failed to attach /aichat route", e);
+}
+
 HttpListener.Instance.Listen(PORT);
